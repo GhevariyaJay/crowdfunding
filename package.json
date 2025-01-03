@@ -1,0 +1,22 @@
+{
+  "name": "crowdfunding",
+  "version": "1.0.0",
+  "description": "crowdfinding website",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm run app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "crowdfunding"
+  },
+  "keywords": [
+    "crowdfunding",
+    "website"
+  ],
+  "author": "Jay Ghevariya, Bidisha Biswas, Ayush Dhori, Athrv Shinde, Ayush singh",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

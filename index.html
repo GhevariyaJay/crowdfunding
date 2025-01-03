@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdfunding Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #131212;
+            padding: 15px 30px;
+            color: #999393;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #318b34;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?funding,donate') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            color: rgb(75, 72, 61);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-shadow: 2px 2px 4px rgba(212, 183, 183, 0.7);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+
+        .cta-btn {
+            padding: 15px 30px;
+            background-color: #2f4d88;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Main Selection Section */
+        .selection {
+            padding: 50px 30px;
+            text-align: center;
+            background-color: #c4cdb2;
+        }
+
+        .selection h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .selection-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .selection-btn {
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            color: rgb(252, 252, 252);
+            background-color: #2f4d88;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .selection-btn:hover {
+            transform: scale(1.05);
+            background-color: #45a049;
+        }
+
+        .selection-btn:focus {
+            outline: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .selection h2 {
+                font-size: 2rem;
+            }
+
+            .selection-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Our Crowdfunding Platform</h1>
+        <p>Support causes, invest in startups, and make a difference</p>
+        <a href="#selection" class="cta-btn">Get Started</a>
+    </section>
+
+    <!-- Selection Section -->
+    <section id="selection" class="selection">
+        <h2>What Would You Like to Do?</h2>
+        <p>Choose an option that suits your interests</p>
+        <div class="selection-buttons">
+            <button class="selection-btn" id="investor-btn" onclick="redirectTo('investor')">Become an
+                Investor</button>
+            <button class="selection-btn" id="donor-btn" onclick="redirectTo('donor')">Make a Donation</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Crowdfunding Platform | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        // Function to redirect to investor or donor section
+        function redirectTo(role) {
+            if (role === 'investor') {
+                window.location.href = "html/investorLogin.html";  // Redirect to the Investor page 
+            } else if (role === 'donor') {
+                window.location.href = "html/donorLogin.html";  // Redirect to the Donation page 
+            }
+        }
+    </script>
+
+</body>
+
+</html>
